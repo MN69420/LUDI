@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell
+    x:Class="Nomadic.AppShell"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:fontawesome="clr-namespace:FontAwesome"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:views="clr-namespace:Nomadic.Views.Pages"
+    Shell.BackgroundColor="{DynamicResource PageBackgroundColor}"
+    Shell.DisabledColor="{DynamicResource ShellDisabledColor}"
+    Shell.ForegroundColor="{DynamicResource ShellForegroundColor}"
+    Shell.NavBarHasShadow="False"
+    Shell.TabBarBackgroundColor="{DynamicResource ShellTabBarBackgroundColor}"
+    Shell.TabBarDisabledColor="{DynamicResource ShellTabBarDisabledColor}"
+    Shell.TabBarForegroundColor="{DynamicResource ShellTabBarForegroundColor}"
+    Shell.TabBarUnselectedColor="{DynamicResource ShellTabBarUnselectedColor}"
+    Shell.TitleColor="{DynamicResource ShellTitleColor}"
+    Shell.UnselectedColor="{DynamicResource ShellUnselectedColor}"
+    mc:Ignorable="d">
+
+    <TabBar>
+        
+        <ShellContent
+
+            Title="Mis Cursos"
+            ContentTemplate="{DataTemplate views:MyInterests}"
+            Route="mainFeed">
+            <ShellContent.Icon>
+                <FontImageSource
+                    FontFamily="{StaticResource FontAwesomeSolid}"
+                    Glyph="{x:Static fontawesome:FontAwesomeIcons.Shapes}"
+                    Size="20" />
+            </ShellContent.Icon>
+        </ShellContent>
+
+
+        <ShellContent
+            Title="Duda"
+            ContentTemplate="{DataTemplate views:Local}"
+            Route="interests">
+            <ShellContent.Icon>
+                <FontImageSource
+                    FontFamily="{StaticResource FontAwesomeSolid}"
+                    Glyph="{x:Static fontawesome:FontAwesomeIcons.Bolt}"
+                    Size="20" />
+            </ShellContent.Icon>
+        </ShellContent>
+
+        <ShellContent
+            Title="Premios"
+            ContentTemplate="{DataTemplate views:Explore}"
+            Route="explore">
+            <ShellContent.Icon>
+                <FontImageSource
+                    FontFamily="{StaticResource FontAwesomeSolid}"
+                    Glyph="{x:Static fontawesome:FontAwesomeIcons.Trophy}"
+                    Size="20" />
+            </ShellContent.Icon>
+        </ShellContent>
+
+
+        <ShellContent
+            Title="Usuario"
+            ContentTemplate="{DataTemplate views:Settings}"
+            Route="settings">
+            <ShellContent.Icon>
+                <FontImageSource
+                    FontFamily="{StaticResource FontAwesomeSolid}"
+                    Glyph="{x:Static fontawesome:FontAwesomeIcons.User}"
+                    Size="20" />
+            </ShellContent.Icon>
+        </ShellContent>
+        
+    </TabBar>
+
+</Shell>
